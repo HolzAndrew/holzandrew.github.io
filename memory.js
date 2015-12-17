@@ -27,7 +27,11 @@ var box_color_change = (function(arr){
     clicks += 1;
     console.log(clicks);
      if( clicks <=2 ){
-      $(this).addClass('reveal');
+        $(this).addClass('flipped');
+        //setTimeout(function(){
+        $(this).addClass('reveal')
+      //}, 
+      //1000)
       selected_card_array.push($(this));
       checker();
       //console.log(clicks);
@@ -78,8 +82,8 @@ var checker = function(){
          
         else {   
           setTimeout(function(){
-          $(selected_card_array[1]).removeClass('reveal');
-          $(selected_card_array[0]).removeClass('reveal');  
+          $(selected_card_array[1]).removeClass('reveal flipped');
+          $(selected_card_array[0]).removeClass('reveal flipped');  
           selected_card_array = [];   
           console.log(selected_card_array[0]) 
           clicks = 0;

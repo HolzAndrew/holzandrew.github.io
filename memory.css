@@ -19,7 +19,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 body{
-  background-color: green;
+  background-color: #208020;
   line-height: 1;
 }
 
@@ -57,6 +57,13 @@ body{
   margin: .25em;
   font-size: 2em;
   line-height: 4em;
+  /*transform: rotateY(180deg) rotateX(180deg);*/
+  
+}
+
+.box.flipped{
+  transition: transform 2s;
+  transform: rotateY(180deg) rotateX(180deg);
 }
 .row1{
   position: relative;
